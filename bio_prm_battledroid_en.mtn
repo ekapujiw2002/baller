@@ -1,0 +1,1340 @@
+ï»¿type=motion
+version=1.01
+enable=0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+motor_type=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+page_begin
+name=Init
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+step=0 512 512 512 512 512 512 552 472 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.072
+page_end
+page_begin
+name=Ready
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+step=0 512 512 512 512 734 290 578 449 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 1.200
+page_end
+page_begin
+name=Forward walk
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 60
+step=0 607 607 452 340 734 290 652 372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.456
+step=0 487 487 432 320 772 290 602 352 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.320
+step=0 417 417 512 512 734 290 652 372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.016 0.680
+step=0 417 417 684 592 734 290 652 372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.456
+step=0 537 537 704 612 734 252 672 422 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.320
+step=0 607 607 532 492 734 290 652 372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.016 0.680
+step=0 607 607 532 492 734 290 652 372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.400
+page_end
+page_begin
+name=Backward walk
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 60
+step=0 681 643 512 512 734 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 681 643 661 585 734 215 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.392
+step=0 436 445 727 617 734 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.648
+step=0 358 372 512 512 734 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.024 0.760
+step=0 358 372 450 324 812 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.496
+step=0 569 540 425 295 734 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.560
+step=0 681 643 512 512 734 289 572 451 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.768
+page_end
+page_begin
+name=Turn right
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 50
+step=0 512 512 512 512 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 512 512 685 585 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.456
+step=0 512 420 713 611 734 341 572 487 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.648
+step=0 512 440 512 512 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.712
+step=0 512 440 452 358 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.400
+step=0 512 512 512 512 734 290 578 449 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.544
+page_end
+page_begin
+name=Turn left
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 50
+step=0 512 512 512 512 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 512 512 452 367 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.384
+step=0 610 512 407 341 734 290 505 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.520
+step=0 610 512 512 512 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.608
+step=0 610 512 644 573 734 290 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.352
+step=0 512 512 512 512 734 290 578 449 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.464
+page_end
+page_begin
+name=Bravo1
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 60
+step=0 512 512 512 512 734 289 578 448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.400 0.592
+step=0 625 614 508 519 823 480 625 475 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.400 0.336
+step=0 410 399 505 516 544 201 559 399 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.400 0.496
+step=0 512 512 508 514 1013 10 571 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.240 1.664
+page_end
+page_begin
+name=Bravo2
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 2 1.0 60
+step=0 512 512 512 512 1013 10 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 1.784
+step=0 631 614 508 515 917 131 739 305 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.440
+step=0 512 512 512 512 1013 10 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 410 393 509 516 893 107 719 285 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.440
+step=0 512 512 512 512 1013 10 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+page_end
+page_begin
+name=Attack L side
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 60
+step=0 358 345 512 512 735 224 572 536 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.512
+step=0 679 666 512 512 732 202 581 240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.160 0.336
+step=0 512 512 512 512 734 290 578 449 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.736
+page_end
+page_begin
+name=Attack R side
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 60
+step=0 679 666 512 512 800 289 488 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.512
+step=0 358 345 512 512 822 292 784 443 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.160 0.336
+step=0 512 512 512 512 733 290 577 449 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.736
+page_end
+page_begin
+name=Attack F(R)
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 40
+step=0 360 379 512 512 734 289 572 425 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 360 379 696 596 734 289 572 425 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.488
+step=0 624 597 663 619 734 289 572 508 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.560
+step=0 720 677 512 512 825 289 691 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.160 0.072
+page_end
+page_begin
+name=Attack F(L)
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 40
+step=0 686 650 512 512 734 289 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.592
+step=0 686 650 452 340 734 289 572 452 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.456
+step=0 447 455 421 350 734 289 529 425 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.504
+step=0 322 332 512 512 734 215 572 341 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.160 0.072
+page_end
+page_begin
+name=F getup
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+step=0 512 512 207 817 216 806 811 218 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 0.400
+step=512 512 512 207 817 176 846 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 0.000 1.000
+step=0 512 512 207 817 402 622 512 512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 1.000
+step=512 512 512 207 817 512 512 823 200 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 0.000 0.400
+step=0 512 512 511 511 734 289 578 448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.000 1.000
+page_end
+page_begin
+name=B getup
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 40
+step=0 512 512 213 811 812 227 811 214 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.400 1.000
+step=512 512 512 213 811 812 227 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 512 0.000 0.400
+step=0 612 412 212 812 512 512 612 412 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.000 1.000
+step=0 511 512 512 511 733 289 578 447 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.000 0.400
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+page_begin
+name=
+compliance=5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+play_param=0 0 1 1.0 32
+page_end
+Œ}

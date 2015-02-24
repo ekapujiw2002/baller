@@ -1,0 +1,269 @@
+﻿version 2.04
+platform bioloid2
+o // param_text:Bioloid Premium Kit Battle Droid Task code
+o // param_text:Initial Release : July 9, 2010.
+o // param_text:Revised : Assembly check added (September 28, 2010).
+o // param_text:How the program works
+o // param_text:The robot attacks when it encpunters an obstacle.
+o // param_text:The robot gets up after falling down (forward or backwards).
+o main
+o begin
+o if param_src:cm:32 lop:== param_src:button_num:4 rop:then
+o jump laddr_dest:AssemblyCheckMode
+o for param_var:ID param_src:dec_num:1 param_src:dec_num:8
+o begin
+o if param_src:custom:b:ID:3 lop:!= param_src:var:ID rop:then
+o call faddr_dest:AssemblyError
+o // param_text:Dynamixel ID check
+o if param_src:custom:w:ID:8 lop:== param_src:dec_num:0 rop:then
+o load param_dest:custom:w:ID:8 param_src:dec_num:1023
+o // param_text:Dynamixel mode check (joint or wheel)
+o end
+o // param_text:Assembly check
+o call faddr_dest:Standby
+o load param_dest:var:falldown param_src:dec_num:0
+- 
+o while(1)
+o begin
+o call faddr_dest:Forward
+- 
+o if param_src:motor:3:40 lop:<= param_src:dec_num:100 rop:&& param_src:var:falldown lop:< param_src:dec_num:2 rop:then
+o compute param_dest:var:falldown param_src:var:falldown aop:+ param_src:dec_num:1
+o elseif param_src:motor:7:40 lop:>= param_src:dec_num:50 rop:&& param_src:var:falldown lop:< param_src:dec_num:2 rop:then
+o compute param_dest:var:falldown param_src:var:falldown aop:+ param_src:dec_num:1
+o elseif param_src:motor:8:40 lop:>= param_src:dec_num:50 rop:&& param_src:var:falldown lop:< param_src:dec_num:2 rop:then
+o compute param_dest:var:falldown param_src:var:falldown aop:+ param_src:dec_num:1
+o elseif param_src:motor:3:40 lop:<= param_src:dec_num:100 rop:&& param_src:var:falldown lop:>= param_src:dec_num:2 rop:then
+o call faddr_dest:StandUp
+o elseif param_src:motor:7:40 lop:>= param_src:dec_num:50 rop:&& param_src:var:falldown lop:>= param_src:dec_num:2 rop:then
+o call faddr_dest:StandUp
+o elseif param_src:motor:8:40 lop:>= param_src:dec_num:50 rop:&& param_src:var:falldown lop:>= param_src:dec_num:2 rop:then
+o call faddr_dest:StandUp
+o elseif param_src:motor:3:40 lop:>= param_src:dec_num:1000 rop:then
+o load param_dest:var:falldown param_src:dec_num:0
+- 
+o if param_src:aux_ir:1 lop:>= param_src:dec_num:10 rop:then
+o call faddr_dest:Attack
+o end
+o // param_text:Assembly check
+o label laddr_src:AssemblyCheckMode
+o // param_text:Assembly check tune
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:1
+- 
+o load param_dest:var:ID param_src:dec_num:1
+o load param_dest:motor:254:32 param_src:dir_num:100
+o load param_dest:motor:254:24 param_src:bool_num:0
+o load param_dest:motor:254:25 param_src:bool_num:0
+o load param_dest:cm:33 param_src:timer_num:12
+o call faddr_dest:WaitTimerCompletion
+- 
+o while(1)
+o begin
+o if param_src:cm:32 lop:== param_src:button_num:8 rop:then
+o begin
+o load param_dest:motor:254:24 param_src:bool_num:0
+o load param_dest:cm:33 param_src:timer_num:5
+o load param_dest:cm:55 param_src:buzzertime_num:5
+o load param_dest:cm:54 param_src:scale_num:15
+o call faddr_dest:WaitTimerCompletion
+o if param_src:var:ID lop:< param_src:dec_num:8 rop:then
+o begin
+o load param_dest:custom:b:ID:24 param_src:dec_num:0
+o load param_dest:custom:b:ID:25 param_src:dec_num:0
+o compute param_dest:var:ID param_src:var:ID aop:+ param_src:dec_num:1
+o end
+o end
+o elseif param_src:cm:32 lop:== param_src:button_num:4 rop:then
+o begin
+o load param_dest:motor:254:24 param_src:bool_num:0
+o load param_dest:cm:33 param_src:timer_num:5
+o load param_dest:cm:55 param_src:buzzertime_num:5
+o load param_dest:cm:54 param_src:scale_num:3
+o call faddr_dest:WaitTimerCompletion
+o if param_src:var:ID lop:> param_src:dec_num:1 rop:then
+o begin
+o load param_dest:custom:b:ID:24 param_src:dec_num:0
+o load param_dest:custom:b:ID:25 param_src:dec_num:0
+o compute param_dest:var:ID param_src:var:ID aop:- param_src:dec_num:1
+o end
+o end
+o elseif param_src:cm:32 lop:== param_src:button_num:1 rop:then
+o jump laddr_dest:SensorCheckMode
+o if param_src:custom:b:ID:3 lop:!= param_src:var:ID rop:then
+o begin
+o if param_src:cm:55 lop:== param_src:buzzertime_num:0 rop:then
+o begin
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:16
+o end
+o end
+o elseif param_src:custom:w:ID:34 lop:== param_src:dec_num:0 rop:then
+o begin
+o if param_src:cm:55 lop:== param_src:buzzertime_num:0 rop:then
+o begin
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:18
+o end
+o end
+o else
+o begin
+o load param_dest:custom:w:ID:30 param_src:dec_num:512
+o load param_dest:custom:b:ID:25 param_src:dec_num:1
+o end
+o end
+o label laddr_src:SensorCheckMode
+o load param_dest:motor:254:32 param_src:dir_num:100
+o load param_dest:motor:254:24 param_src:bool_num:0
+o load param_dest:motor:254:25 param_src:bool_num:0
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:10
+o call faddr_dest:AssemblyCheckPosition
+o while(1)
+o begin
+o if param_src:cm:32 lop:== param_src:button_num:2 rop:then
+o jump laddr_dest:AssemblyCheckMode
+o if param_src:aux_ir:1 lop:>= param_src:dec_num:50 rop:then
+o begin
+o load param_dest:custom:w:7:30 param_src:dec_num:612
+o load param_dest:custom:w:8:30 param_src:dec_num:412
+o end
+o else
+o begin
+o load param_dest:custom:w:7:30 param_src:dec_num:512
+o load param_dest:custom:w:8:30 param_src:dec_num:512
+o end
+o load param_dest:motor:254:32 param_src:dir_num:100
+o end
+o // param_text:Assembly check
+o end
+- 
+o function faddr_src:Standby
+o begin
+o load param_dest:cm:55 param_src:dec_num:255
+o load param_dest:cm:54 param_src:dec_num:0
+o call faddr_dest:Ready
+o call faddr_dest:Bravo1
+o call faddr_dest:Ready
+o end
+- 
+o function faddr_src:InitialPosition
+o begin
+o load param_dest:motion:24 param_src:dec_num:1
+o call faddr_dest:WaitMotion
+- 
+o end
+- 
+o function faddr_src:Ready
+o begin
+o load param_dest:motion:24 param_src:dec_num:2
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:StandUp
+o begin
+o call faddr_dest:InitialPosition
+o load param_dest:var:falldown param_src:dec_num:0
+- 
+o if param_src:aux_ir:1 lop:>= param_src:dec_num:50 rop:then
+o call faddr_dest:BackwardsGetUp
+o else
+o call faddr_dest:ForwardGetUp
+o end
+- 
+o function faddr_src:Forward
+o begin
+o load param_dest:motion:24 param_src:dec_num:3
+o call faddr_dest:WaitMotion
+o end
+- 
+- 
+o function faddr_src:Reverse
+o begin
+o load param_dest:motion:24 param_src:dec_num:4
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:TurnRight
+o begin
+o load param_dest:motion:24 param_src:dec_num:5
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:TurnLeft
+o begin
+o load param_dest:motion:24 param_src:dec_num:6
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:Bravo1
+o begin
+o load param_dest:motion:24 param_src:dec_num:7
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:Bravo2
+o begin
+o load param_dest:motion:24 param_src:dec_num:8
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:Attack
+o begin
+o load param_dest:motion:24 param_src:dec_num:9
+o call faddr_dest:WaitMotion
+o load param_dest:motion:24 param_src:dec_num:10
+o call faddr_dest:WaitMotion
+o load param_dest:motion:24 param_src:dec_num:11
+o call faddr_dest:WaitMotion
+o load param_dest:motion:24 param_src:dec_num:12
+o call faddr_dest:WaitMotion
+o load param_dest:motion:24 param_src:dec_num:2
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:ForwardGetUp
+o begin
+o load param_dest:motion:24 param_src:dec_num:13
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:BackwardsGetUp
+o begin
+o load param_dest:motion:24 param_src:dec_num:14
+o call faddr_dest:WaitMotion
+o end
+- 
+o function faddr_src:WaitMotion
+o begin
+o wait param_src:motion:25 lop:== param_src:bool_num:1 rop:then
+o end
+o // param_text:Assembly check
+o function faddr_src:WaitTimerCompletion
+o begin
+o wait param_src:cm:33 lop:> param_src:timer_num:0 rop:then
+o end
+- 
+o function faddr_src:AssemblyCheckPosition
+o begin
+o for param_var:ID param_src:dec_num:1 param_src:dec_num:8
+o begin
+o load param_dest:custom:w:ID:30 param_src:dec_num:512
+o end
+o end
+- 
+o function faddr_src:AssemblyError
+o begin
+o load param_dest:motor:254:32 param_src:dir_num:100
+o load param_dest:motor:254:24 param_src:bool_num:0
+o load param_dest:motor:254:25 param_src:bool_num:0
+o while(1)
+o begin
+o if param_src:cm:55 lop:== param_src:buzzertime_num:0 rop:then
+o begin
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:16
+o end
+o end
+o end
+/

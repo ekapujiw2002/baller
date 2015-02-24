@@ -1,0 +1,111 @@
+ï»¿version 2.05
+platform bioloid2
+o main
+o begin
+o load param_dest:motor:7:32 param_src:dec_num:150
+o load param_dest:motor:8:32 param_src:dec_num:50
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:0
+o while param_src:cm:32 lop:!= param_src:button_num:4 rop:then
+o begin
+o // param_text:camera id fixed to 100
+o load param_dest:var:CamID param_src:dec_num:100
+o // param_text:color to track
+o load param_dest:var:Color param_src:dec_num:1
+o // param_text:send command to start tracking
+o load param_dest:custom:b:CamID:0 param_src:dec_num:0
+o // param_text:timer to wait for tracking result
+o load param_dest:cm:33 param_src:timer_num:2
+o // param_text:wait until timer is timeout
+o wait param_src:cm:33 lop:> param_src:timer_num:0 rop:then
+o // param_text:calculate the bounding box area, get min max value of the bounding box
+o call faddr_dest:Get_Bounding_Box
+o // param_text:calculate the center area from min and max value for x and y
+o compute param_dest:var:Cx param_src:var:Minx aop:+ param_src:var:Maxx
+o compute param_dest:var:Cy param_src:var:Miny aop:+ param_src:var:Maxy
+o compute param_dest:var:Cx param_src:var:Cx aop:/ param_src:dec_num:2
+o compute param_dest:var:Cy param_src:var:Cy aop:/ param_src:dec_num:2
+o // param_text:got any area detected???
+o if param_src:var:Max lop:!= param_src:dec_num:0 rop:then
+o begin
+o // param_text:print some info to serial port
+o load param_dest:cm:37 param_src:custom:b:CamID:0
+o load param_dest:cm:37 param_src:var:Max
+o load param_dest:cm:37 param_src:var:Cx
+o load param_dest:cm:38 param_src:var:Cy
+o // param_text:center x more than 90 --> turn right
+o if param_src:var:Cx lop:> param_src:dec_num:90 rop:then
+o begin
+o // param_text:putar kanan
+o compute param_dest:var:Delta param_src:var:Cx aop:- param_src:dec_num:90
+o compute param_dest:var:Pan param_src:motor:7:36 aop:- param_src:var:Delta
+o load param_dest:motor:7:30 param_src:var:Pan
+o end
+o // param_text:less than 90 --> turn left
+o elseif param_src:var:Cx lop:< param_src:dec_num:90 rop:then
+o begin
+o // param_text:putar kiri
+o compute param_dest:var:Delta param_src:var:Cx aop:- param_src:dec_num:90
+o compute param_dest:var:Pan param_src:motor:7:36 aop:- param_src:var:Delta
+o load param_dest:motor:7:30 param_src:var:Pan
+o end
+o // param_text:y center more than 90 --> look down
+o if param_src:var:Cy lop:> param_src:dec_num:90 rop:then
+o begin
+o // param_text:bawah
+o compute param_dest:var:Delta param_src:var:Cy aop:- param_src:dec_num:90
+o compute param_dest:var:Tilt param_src:motor:8:36 aop:+ param_src:var:Delta
+o load param_dest:motor:8:30 param_src:var:Tilt
+o end
+o // param_text:y center less than 90 --> look up
+o elseif param_src:var:Cy lop:< param_src:dec_num:90 rop:then
+o begin
+o // param_text:atas
+o compute param_dest:var:Delta param_src:var:Cy aop:- param_src:dec_num:90
+o compute param_dest:var:Tilt param_src:motor:8:36 aop:+ param_src:var:Delta
+o load param_dest:motor:8:30 param_src:var:Tilt
+o end
+o end
+o end
+o // param_text:end of tracking
+o load param_dest:cm:55 param_src:buzzertime_num:255
+o load param_dest:cm:54 param_src:melody_num:1
+o exit
+o end
+- 
+o // param_text:kalkulasi titik tengah dari warna yang ditrace
+o function faddr_src:Get_Bounding_Box
+o begin
+o load param_dest:var:Max param_src:dec_num:0
+o for param_var:Index param_src:dec_num:1 param_src:dec_num:15
+o begin
+o compute param_dest:var:Addr param_src:var:Index aop:* param_src:dec_num:16
+o if param_src:custom:b:CamID:Addr lop:!= param_src:dec_num:0 rop:then
+o begin
+o compute param_dest:var:Addr param_src:var:Addr aop:+ param_src:dec_num:1
+o if param_src:custom:b:CamID:Addr lop:== param_src:var:Color rop:then
+o begin
+o compute param_dest:var:Addr param_src:var:Addr aop:+ param_src:dec_num:1
+o load param_dest:var:Size param_src:custom:w:CamID:Addr
+o if param_src:var:Size lop:> param_src:var:Max rop:then
+o begin
+o load param_dest:var:Max param_src:var:Size
+o load param_dest:var:MaxAddr param_src:var:Addr
+o end
+o end
+o end
+o end
+o if param_src:var:Max lop:== param_src:dec_num:0 rop:then
+o begin
+o return
+o end
+o compute param_dest:var:Addr param_src:var:MaxAddr aop:+ param_src:dec_num:10
+o load param_dest:var:Maxx param_src:custom:b:CamID:Addr
+o compute param_dest:var:Addr param_src:var:Addr aop:+ param_src:dec_num:1
+o load param_dest:var:Minx param_src:custom:b:CamID:Addr
+o compute param_dest:var:Addr param_src:var:Addr aop:+ param_src:dec_num:1
+o load param_dest:var:Maxy param_src:custom:b:CamID:Addr
+o compute param_dest:var:Addr param_src:var:Addr aop:+ param_src:dec_num:1
+o load param_dest:var:Miny param_src:custom:b:CamID:Addr
+o end
+“R
