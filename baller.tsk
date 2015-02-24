@@ -1,61 +1,63 @@
-﻿version 2.05
+﻿version 3.00
+cm_version 1.0
 platform CM-530
-o // param_text:Jalan 3 Langkah
+o // param_text:Jalan maju
 o function faddr_src:Jalan
 o begin
 o call faddr_dest:Exit
-o load param_dest:motion:24 param_src:dec_num:3
-o wait param_src:motion:24 lop:!= param_src:dec_num:6 rop:then
+o load param_dest:motion:1:50 param_src:dec_num:3
+o wait param_src:motion:1:50 lop:!= param_src:dec_num:6 rop:then
 o call faddr_dest:Exit
 o end
 - 
-o // param_text:Mundur 3 Langkah
+o // param_text:Mundur
 o function faddr_src:Mundur
 o begin
 o call faddr_dest:Exit
-o load param_dest:motion:24 param_src:dec_num:80
-o while param_src:motion:25 lop:== param_src:bool_num:1 rop:then
-o begin
-- 
-o end
+o load param_dest:motion:1:50 param_src:dec_num:80
+o wait param_src:motion:1:51 lop:== param_src:bool_num:1 rop:then
 o call faddr_dest:Exit
 o end
 - 
+o // param_text:Tendang ke depan dgn kaki kanan
 o function faddr_src:TendangDepanKanan
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:32
+o load param_dest:motion:1:50 param_src:dec_num:32
 o call faddr_dest:MotionReady
 o call faddr_dest:Exit
 o end
 - 
+o // param_text:Tendang depan dengan kaki kiri
 o function faddr_src:TendangDepanKiri
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:33
+o load param_dest:motion:1:50 param_src:dec_num:33
 o call faddr_dest:MotionReady
 o call faddr_dest:Exit
 o end
 - 
+o // param_text:Putar badan ke kiri
 o function faddr_src:PutarKiri
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:28
+o load param_dest:motion:1:50 param_src:dec_num:28
 o call faddr_dest:Exit
 o end
 - 
+o // param_text:Putar badan ke kanan
 o function faddr_src:PutarKanan
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:27
+o load param_dest:motion:1:50 param_src:dec_num:27
 o call faddr_dest:Exit
 o end
 - 
-o // param_text:Putar Kiri 5 kali dan Kanan 5 kali
+o // param_text:Putar kanan atau kiri n kali
 o // param_text:nputar, yang di gunakan di loop for untuk n kali, yang berarti 5 kali pengulangan. nputar = 4
 o // param_text:tputar, yang digunakan di timer untuk menunggu sampai 0.2 detik dan di lanjuti PutarKanan sampai Loop selesai
 o function faddr_src:PutarKiriNKananN
@@ -70,27 +72,26 @@ o else
 o begin
 o call faddr_dest:PutarKiri
 o end
-o load param_dest:cm:33 param_src:var:tputar
-o while param_src:cm:33 lop:!= param_src:timer_num:0 rop:then
-o begin
-- 
-o end
+o load param_dest:cm:5 param_src:var:tputar
+o wait param_src:cm:5 lop:!= param_src:timer_num:0 rop:then
 o end
 o end
 - 
+o // param_text:Geser kanan
 o function faddr_src:GeserKanan
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:23
+o load param_dest:motion:1:50 param_src:dec_num:23
 o call faddr_dest:Exit
 o end
 - 
+o // param_text:Geser kiri
 o function faddr_src:GeserKiri
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:24
+o load param_dest:motion:1:50 param_src:dec_num:24
 o call faddr_dest:Exit
 o end
 - 
@@ -110,29 +111,32 @@ o end
 o end
 o end
 - 
+o // param_text:Bangun dari jatuh depan
 o function faddr_src:BangunDepan
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:29
+o load param_dest:motion:1:50 param_src:dec_num:29
 o call faddr_dest:MotionReady
 o end
 - 
+o // param_text:Bangun jatuh belakang
 o function faddr_src:BangunBelakang
 o begin
 o call faddr_dest:Exit
 o load param_dest:var:GyroMode param_src:bool_num:0
-o load param_dest:motion:24 param_src:dec_num:30
+o load param_dest:motion:1:50 param_src:dec_num:30
 o call faddr_dest:MotionReady
 o end
 - 
+o // param_text:Cek jatuh atau tidak -- masih eror
 o function faddr_src:CekJatuh
 o begin
 o if param_src:var:StatusJatuh lop:!= param_src:dec_num:0 rop:then
 o begin
-o load param_dest:cm:33 param_src:timer_num:8
-o wait param_src:cm:33 lop:!= param_src:timer_num:0 rop:then
-o load param_dest:cm:38 param_src:var:StatusJatuh
+o load param_dest:cm:5 param_src:timer_num:8
+o wait param_src:cm:5 lop:!= param_src:timer_num:0 rop:then
+o load param_dest:cm:11 param_src:var:StatusJatuh
 o if param_src:var:StatusJatuh lop:== param_src:dec_num:1 rop:then
 o begin
 x call faddr_dest:BangunDepan
@@ -145,12 +149,12 @@ o load param_dest:var:StatusJatuh param_src:dec_num:0
 o end
 o end
 - 
-- 
+o // param_text:PROGRAM UTAMA
 o main
 o begin
 o load param_dest:var:Initial param_src:bool_num:1
-o load param_dest:motion:24 param_src:dec_num:1
-o load param_dest:cm:59 param_src:channel_num:1
+o load param_dest:motion:1:50 param_src:dec_num:1
+o load param_dest:cm:22 param_src:channel_num:1
 - 
 o // param_text:init threshold jatuh depan blkg
 o compute param_dest:var:THJatuhDepan param_src:dec_num:0 aop:- param_src:dec_num:200
@@ -159,17 +163,17 @@ o load param_dest:var:StatusJatuh param_src:dec_num:0
 - 
 o while(1)
 o begin
-o if param_src:cm:30 lop:== param_src:bool_num:1 rop:then
+o if param_src:cm:2 lop:== param_src:bool_num:1 rop:then
 o begin
-o load param_dest:cm:55 param_src:buzzertime_num:255
-o load param_dest:cm:54 param_src:melody_num:2
+o load param_dest:cm:18 param_src:buzzertime_num:255
+o load param_dest:cm:17 param_src:melody_num:2
 o break
 o end
 o end
 - 
 o while(1)
 o begin
-x load param_dest:cm:38 param_src:var:FBBalErrorScaled
+x load param_dest:cm:11 param_src:var:FBBalErrorScaled
 o // param_text:kalkulasi gyro utk posisi imbang page 1
 o if param_src:var:Initial lop:== param_src:bool_num:1 rop:then
 o begin
@@ -182,48 +186,48 @@ o // param_text:set default gyro on mode2
 o load param_dest:var:GyroMode param_src:bool_num:1
 o load param_dest:var:GyroMode2 param_src:dec_num:2
 - 
-o if param_src:cm:32 lop:== param_src:button_num:8 rop:then
+o if param_src:cm:4 lop:== param_src:button_num:8 rop:then
 o begin
 o while(1)
 o begin
-o load param_dest:cm:33 param_src:timer_num:3
-o wait param_src:cm:33 lop:!= param_src:timer_num:0 rop:then
+o load param_dest:cm:5 param_src:timer_num:3
+o wait param_src:cm:5 lop:!= param_src:timer_num:0 rop:then
 o call faddr_dest:Jalan
-o load param_dest:cm:38 param_src:var:StatusJatuh
-o load param_dest:cm:38 param_src:var:FBBalErrorScaled
+o load param_dest:cm:11 param_src:var:StatusJatuh
+o load param_dest:cm:11 param_src:var:FBBalErrorScaled
 o end
 o call faddr_dest:CekJatuh
 o end
-o if param_src:cm:32 lop:== param_src:button_num:4 rop:then
+o if param_src:cm:4 lop:== param_src:button_num:4 rop:then
 o begin
-o load param_dest:cm:38 param_src:dec_num:3
+o load param_dest:cm:11 param_src:dec_num:3
 o call faddr_dest:CekJatuh
 o end
-o elseif param_src:cm:30 lop:== param_src:bool_num:1 rop:then
+o elseif param_src:cm:2 lop:== param_src:bool_num:1 rop:then
 o begin
 x call faddr_dest:BlinkingHeadLED
 - 
-o if param_src:cm:28 lop:== param_src:rc100z_num:1 rop:then
+o if param_src:cm:1 lop:== param_src:rc100z_num:1 rop:then
 o begin
 o call faddr_dest:Jalan
 o end
-o elseif param_src:cm:28 lop:== param_src:rc100z_num:2 rop:then
+o elseif param_src:cm:1 lop:== param_src:rc100z_num:2 rop:then
 o begin
 o call faddr_dest:Mundur
 o end
-o elseif param_src:cm:28 lop:== param_src:rc100z_num:8 rop:then
+o elseif param_src:cm:1 lop:== param_src:rc100z_num:8 rop:then
 o begin
 o call faddr_dest:PutarKanan
 o end
-o elseif param_src:cm:28 lop:== param_src:rc100z_num:4 rop:then
+o elseif param_src:cm:1 lop:== param_src:rc100z_num:4 rop:then
 o begin
 o call faddr_dest:PutarKiri
 o end
-o elseif param_src:cm:28 lop:== param_src:rc100z_num:136 rop:then
+o elseif param_src:cm:1 lop:== param_src:rc100z_num:136 rop:then
 o begin
 o call faddr_dest:TendangDepanKanan
 o end
-o elseif param_src:cm:28 lop:== param_src:rc100z_num:132 rop:then
+o elseif param_src:cm:1 lop:== param_src:rc100z_num:132 rop:then
 o begin
 o call faddr_dest:TendangDepanKiri
 o end
@@ -233,32 +237,32 @@ o end
 - 
 o function faddr_src:BlinkingHeadLED
 o begin
-o load param_dest:aux_custom:5 param_src:port_num:1
-o if param_src:cm:33 lop:== param_src:timer_num:0 rop:then
+o load param_dest:aux:5:67 param_src:port_num:1
+o if param_src:cm:5 lop:== param_src:timer_num:0 rop:then
 o begin
-o load param_dest:aux_custom:5 param_src:port_num:0
-o load param_dest:cm:33 param_src:timer_num:4
+o load param_dest:aux:5:67 param_src:port_num:0
+o load param_dest:cm:5 param_src:timer_num:4
 o end
 o end
 - 
 o function faddr_src:Exit
 o begin
-o load param_dest:motion:24 param_src:dec_num:0
+o load param_dest:motion:1:50 param_src:dec_num:0
 o call faddr_dest:MotionReady
 o end
 o function faddr_src:Abort
 o begin
-o load param_dest:motion:24 param_src:dec_num:-1
+o load param_dest:motion:1:50 param_src:dec_num:-1
 o call faddr_dest:MotionReady
 o end
 o function faddr_src:MotionReady
 o begin
-o wait param_src:motion:25 lop:== param_src:bool_num:1 rop:then
+o wait param_src:motion:1:51 lop:== param_src:bool_num:1 rop:then
 o end
 - 
 o function faddr_src:TimerReady
 o begin
-o wait param_src:cm:33 lop:> param_src:timer_num:0 rop:then
+o wait param_src:cm:5 lop:> param_src:timer_num:0 rop:then
 o end
 - 
 o function faddr_src:DefaultGyro
@@ -268,14 +272,14 @@ o load param_dest:var:RLBalCenter param_src:dec_num:0
 - 
 o for param_var:i param_src:dec_num:1 param_src:dec_num:10
 o begin
-o load param_dest:var:FBBalData param_src:aux_custom:3
-o load param_dest:var:RLBalData param_src:aux_custom:4
+o load param_dest:var:FBBalData param_src:aux:3:67
+o load param_dest:var:RLBalData param_src:aux:4:67
 - 
 o compute param_dest:var:FBBalCenter param_src:var:FBBalCenter aop:+ param_src:var:FBBalData
 o compute param_dest:var:RLBalCenter param_src:var:RLBalCenter aop:+ param_src:var:RLBalData
 - 
-o load param_dest:cm:33 param_src:timer_num:1
-o wait param_src:cm:33 lop:> param_src:timer_num:0 rop:then
+o load param_dest:cm:5 param_src:timer_num:1
+o wait param_src:cm:5 lop:> param_src:timer_num:0 rop:then
 o end
 - 
 o compute param_dest:var:FBBalCenter param_src:var:FBBalCenter aop:/ param_src:dec_num:10
@@ -286,8 +290,8 @@ o callback
 o begin
 o if param_src:var:GyroMode lop:== param_src:bool_num:1 rop:then
 o begin
-o load param_dest:var:FBBalData param_src:aux_custom:3
-o load param_dest:var:RLBalData param_src:aux_custom:4
+o load param_dest:var:FBBalData param_src:aux:3:67
+o load param_dest:var:RLBalData param_src:aux:4:67
 o compute param_dest:var:FBBalError param_src:var:FBBalData aop:- param_src:var:FBBalCenter
 o compute param_dest:var:RLBalError param_src:var:RLBalData aop:- param_src:var:RLBalCenter
 o compute param_dest:var:FBBalErrorScaled param_src:var:FBBalError aop:* param_src:dec_num:4
@@ -314,40 +318,39 @@ o if param_src:var:GyroMode2 lop:== param_src:dec_num:1 rop:then
 o begin
 o compute param_dest:var:FinalFBBal1 param_src:var:FBBalErrorScaled aop:/ param_src:dec_num:25
 o compute param_dest:var:FinalFBBal2 param_src:var:FBBalErrorScaled aop:/ param_src:dec_num:13
-o compute param_dest:motion:139 param_src:dec_num:0 aop:- param_src:var:FinalFBBal1
-o compute param_dest:motion:140 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal1
-o compute param_dest:motion:143 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal2
-o compute param_dest:motion:144 param_src:dec_num:0 aop:- param_src:var:FinalFBBal2
-o compute param_dest:motion:137 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
-o compute param_dest:motion:138 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
-o compute param_dest:motion:145 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
-o compute param_dest:motion:146 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
+o compute param_dest:cm_custom:w:139 param_src:dec_num:0 aop:- param_src:var:FinalFBBal1
+o compute param_dest:cm_custom:w:140 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal1
+o compute param_dest:cm_custom:w:143 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal2
+o compute param_dest:cm_custom:w:144 param_src:dec_num:0 aop:- param_src:var:FinalFBBal2
+o compute param_dest:cm_custom:w:137 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
+o compute param_dest:cm_custom:w:138 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
+o compute param_dest:cm_custom:w:145 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
+o compute param_dest:cm_custom:w:146 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
 o end
 o elseif param_src:var:GyroMode2 lop:== param_src:dec_num:2 rop:then
 o begin
 o compute param_dest:var:FinalFBBal1 param_src:var:FBBalErrorScaled aop:/ param_src:dec_num:27
 o compute param_dest:var:FinalFBBal2 param_src:var:FBBalErrorScaled aop:/ param_src:dec_num:15
-o compute param_dest:motion:139 param_src:dec_num:0 aop:- param_src:var:FinalFBBal1
-o compute param_dest:motion:140 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal1
-o compute param_dest:motion:143 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal2
-o compute param_dest:motion:144 param_src:dec_num:0 aop:- param_src:var:FinalFBBal2
-o compute param_dest:motion:137 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
-o compute param_dest:motion:138 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
-o compute param_dest:motion:145 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
-o compute param_dest:motion:146 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
+o compute param_dest:cm_custom:w:139 param_src:dec_num:0 aop:- param_src:var:FinalFBBal1
+o compute param_dest:cm_custom:w:140 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal1
+o compute param_dest:cm_custom:w:143 param_src:dec_num:0 aop:+ param_src:var:FinalFBBal2
+o compute param_dest:cm_custom:w:144 param_src:dec_num:0 aop:- param_src:var:FinalFBBal2
+o compute param_dest:cm_custom:w:137 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
+o compute param_dest:cm_custom:w:138 param_src:dec_num:0 aop:- param_src:var:FinalRLBal1
+o compute param_dest:cm_custom:w:145 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
+o compute param_dest:cm_custom:w:146 param_src:dec_num:0 aop:+ param_src:var:FinalRLBal0
 o end
 o end
 o else
 o begin
-o load param_dest:motion:139 param_src:dec_num:0
-o load param_dest:motion:143 param_src:dec_num:0
-o load param_dest:motion:140 param_src:dec_num:0
-o load param_dest:motion:144 param_src:dec_num:0
+o load param_dest:cm_custom:w:139 param_src:dec_num:0
+o load param_dest:cm_custom:w:143 param_src:dec_num:0
+o load param_dest:cm_custom:w:140 param_src:dec_num:0
+o load param_dest:cm_custom:w:144 param_src:dec_num:0
 - 
-o load param_dest:motion:137 param_src:dec_num:0
-o load param_dest:motion:138 param_src:dec_num:0
-o load param_dest:motion:145 param_src:dec_num:0
-o load param_dest:motion:146 param_src:dec_num:0
+o load param_dest:cm_custom:w:137 param_src:dec_num:0
+o load param_dest:cm_custom:w:138 param_src:dec_num:0
+o load param_dest:cm_custom:w:145 param_src:dec_num:0
+o load param_dest:cm_custom:w:146 param_src:dec_num:0
 o end
 o end
-]�
